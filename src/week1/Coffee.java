@@ -1,3 +1,5 @@
+package week1;
+
 public class Coffee {
     private String size;
     private String type;
@@ -55,7 +57,7 @@ public class Coffee {
 
     @Override
     public String toString() {
-        return "Coffee{" +
+        return "week1.Coffee{" +
                 "size='" + size + '\'' +
                 ", type='" + type + '\'' +
                 ", hasMilk=" + hasMilk +
