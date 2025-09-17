@@ -57,7 +57,7 @@ public class Coffee {
 
     @Override
     public String toString() {
-        return "week1.Coffee{" +
+        return "Coffee{" +
                 "size='" + size + '\'' +
                 ", type='" + type + '\'' +
                 ", hasMilk=" + hasMilk +
