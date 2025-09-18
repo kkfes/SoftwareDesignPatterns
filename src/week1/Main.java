@@ -7,7 +7,8 @@ public class Main {
                 .sugar(2)
                 .syrup("Vanilla")
                 .build();
-        System.out.println(coffeeLatte);
+        coffeeLatte.setSugarCubes(coffeeLatte.getSugarCubes()+1);
+        System.out.println(coffeeLatte.toString());
 
         Coffee espresso = new Coffee.Builder("Small", "Espresso")
                 .sugar(1)

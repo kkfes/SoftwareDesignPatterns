@@ -1,6 +1,7 @@
 package week1;
 
 public class Coffee {
+
     private String size;
     private String type;
     private boolean hasMilk;
