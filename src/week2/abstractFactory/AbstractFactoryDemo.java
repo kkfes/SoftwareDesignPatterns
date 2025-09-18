@@ -1,28 +1,27 @@
 package week2.abstractFactory;
-
 import java.util.Scanner;
 
 public class AbstractFactoryDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter OS type (windows/mac): ");
-        String os = scanner.nextLine();
+        System.out.print("Choose kitchen (italian/kazakh): ");
+        String choice = scanner.nextLine();
 
-        GUIFactory factory;
+        KitchenFactory factory;
 
-        if (os.equalsIgnoreCase("windows")) {
-            factory = new WindowsFactory();
-        } else if (os.equalsIgnoreCase("mac")) {
-            factory = new MacFactory();
+        if (choice.equalsIgnoreCase("italian")) {
+            factory = new ItalianKitchenFactory();
+        } else if (choice.equalsIgnoreCase("kazakh")) {
+            factory = new KazakhKitchenFactory();
         } else {
-            throw new IllegalArgumentException("Unknown OS: " + os);
+            throw new IllegalArgumentException("Unknown cuisine: " + choice);
         }
 
-        Button button = factory.createButton();
-        Checkbox checkbox = factory.createCheckbox();
+        Breakfast breakfast = factory.createBreakfast();
+        Drink drink = factory.createDrink();
 
-        button.paint();
-        checkbox.paint();
+        breakfast.serve();
+        drink.serve();
     }
 }
